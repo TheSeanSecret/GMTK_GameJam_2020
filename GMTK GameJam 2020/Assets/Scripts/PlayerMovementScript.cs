@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementScript : MonoBehaviour
 {
@@ -18,12 +19,26 @@ public class PlayerMovementScript : MonoBehaviour
 
     bool canMove;
 
+    Vector3 startPosition;  // GameObject current position at start is the start position
+
+    /* class KeyDirection
+     {
+         public KeyDirection(string W, string A, string S, string D)
+         {
+             List<string> keyDir = new List<string>(W = "W",A = "A",S = "S",D = "D");
+         }
+     } */
+
+    public string[] wasdKeys = new string[] { "W", "A", "S", "D" };
+
 
     void Start()
     {
         currentDirection = up;
         nextPos = Vector3.forward;
         destination = transform.position;
+
+        startPosition = transform.position;
     }
 
     void Update()
@@ -34,6 +49,9 @@ public class PlayerMovementScript : MonoBehaviour
     void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+
+
+
 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -63,8 +81,6 @@ public class PlayerMovementScript : MonoBehaviour
             canMove = true;
         }
 
-
-
         if (Vector3.Distance(destination, transform.position) <= 0.1f)
         {
             transform.localEulerAngles = currentDirection;   // Rotation
@@ -79,6 +95,8 @@ public class PlayerMovementScript : MonoBehaviour
                 }
             }
         }
+
+
     }
 
     bool Valid()
@@ -91,6 +109,13 @@ public class PlayerMovementScript : MonoBehaviour
         if(Physics.Raycast(myRay,out hit,rayLength))
         {
             if(hit.collider.tag == "Wall")
+            {
+                // transform.position = startPosition;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // Restart Level
+                // return false;
+            }
+
+            if (hit.collider.tag == "Boundary") // cannot move if hit level boundary
             {
                 return false;
             }
