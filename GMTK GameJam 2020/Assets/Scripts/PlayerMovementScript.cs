@@ -25,21 +25,19 @@ public class PlayerMovementScript : MonoBehaviour
 
     private Vector3 startPosition;  // GameObject current position at start is the start position
 
-
-    /*class KeyDirection
-     {
-         public KeyDirection(string W, string A, string S, string D)
-         {
-             List<string> wasdKeys = new List<string>(W = "W",A = "A",S = "S",D = "D");
-         }
-     } */
-
-    // public string[] wasdKeys = new string[] { "W", "A", "S", "D" };
-
     public List<string> wasdKeys;
+
+    // mostly copied from tutorial cuz I don't have time to fully understand what I'm doing
+    [FMODUnity.EventRef]
+    public string moveSound;
+    FMOD.Studio.EventInstance playerMoveSound;
+
+    public List<KeyCode> pressForSound;
 
     void Start()
     {
+        playerMoveSound = FMODUnity.RuntimeManager.CreateInstance(moveSound);   // playerMoveSound instance is equal to moveSound FMOD Event
+        
         currentDirection = up;
         nextPos = Vector3.forward;
         destination = transform.position;
@@ -50,6 +48,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Update()
     {
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(playerMoveSound, GetComponent<Transform>(), GetComponent<Rigidbody>());     // Necessary for 3D sound
         Move();
     }
 
@@ -142,36 +141,44 @@ public class PlayerMovementScript : MonoBehaviour
         }
 
 
-     void moveUp()
+        void moveUp()
         {
             nextPos = Vector3.forward;
             currentDirection = up;
-            canMove = true; 
+            canMove = true;
+            playerMoveSound.start();    // Play move sound
+
         }
 
-    void moveDown()
+        void moveDown()
         {
             nextPos = Vector3.back;
             currentDirection = down;
             canMove = true;
+            playerMoveSound.start();    // Play move sound
+
         }
 
-     void moveRight()
+        void moveRight()
         {
             nextPos = Vector3.right;
             currentDirection = right;
             canMove = true;
+            playerMoveSound.start();    // Play move sound
+
         }
 
-    void moveLeft()
+        void moveLeft()
         {
             nextPos = Vector3.left;
             currentDirection = left;
             canMove = true;
+            playerMoveSound.start();    // Play move sound
+
         }
 
 
-void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
+        void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
     {
         for (int i = 0; i < wasdKeys.Count; i++)
         {
@@ -238,6 +245,8 @@ void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows,
             Instantiate(player, startPosition, Quaternion.identity);  // ...instantiate new player at startposition and destroy this player
             Destroy(other.gameObject);
             Instantiate(playerDeath, transform.position, transform.rotation);
+
+            // FMODUnity.RuntimeManager.PlayOneShot(Death, transform.position);
 
             Destroy(gameObject);
         }

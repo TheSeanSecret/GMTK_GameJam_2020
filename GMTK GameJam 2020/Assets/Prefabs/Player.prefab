@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8209121054336030440}
   - component: {fileID: 8209121054336030436}
   - component: {fileID: 8209121054336030435}
+  - component: {fileID: -1846249811013924782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -116,6 +117,8 @@ MonoBehaviour:
   - A
   - S
   - D
+  moveSound: event:/SFX/PlayerMove
+  pressForSound: 77000000610000007300000064000000
 --- !u!54 &8209121054336030435
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -132,3 +135,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1846249811013924782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8209121054336030441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Wall
+  Event: event:/SFX/Death
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 20
