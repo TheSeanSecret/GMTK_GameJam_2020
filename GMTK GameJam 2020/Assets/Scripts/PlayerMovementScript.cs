@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerMovementScript : MonoBehaviour
 {
     Vector3 
@@ -57,27 +58,128 @@ public class PlayerMovementScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            // if(GetComponent<PlayerMovementScript>().wasdKeys.Contains)
-            moveUp();
+            if (wasdKeys.IndexOf("W").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("W").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("W").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("W").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("Index is " + wasdKeys.ToString());
-            moveLeft();
+            if (wasdKeys.IndexOf("A").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("A").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("A").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("A").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            moveDown();
+            if (wasdKeys.IndexOf("S").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("S").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("S").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("S").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            moveRight();
+            if (wasdKeys.IndexOf("D").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("D").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("D").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("D").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();
         }
 
 
+     void moveUp()
+        {
+            nextPos = Vector3.forward;
+            currentDirection = up;
+            canMove = true; 
+    }
+
+    void moveDown()
+        {
+            nextPos = Vector3.back;
+            currentDirection = down;
+            canMove = true;
+    }
+
+     void moveRight()
+        {
+            nextPos = Vector3.right;
+            currentDirection = right;
+            canMove = true;
+    }
+
+    void moveLeft()
+        {
+            nextPos = Vector3.left;
+            currentDirection = left;
+            canMove = true;
+    }
+
+
+void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
+    {
+        for (int i = 0; i < wasdKeys.Count; i++)
+        {
+            string temp = wasdKeys[i];
+            int randomIndex = Random.Range(i, wasdKeys.Count);
+            wasdKeys[i] = wasdKeys[randomIndex];
+            wasdKeys[randomIndex] = temp;
+        }
+    }
 
         if (Vector3.Distance(destination, transform.position) <= 0.1f)
         {
@@ -94,51 +196,6 @@ public class PlayerMovementScript : MonoBehaviour
             }
         }
     }
-
-     void moveUp()
-        {
-            nextPos = Vector3.forward;
-            currentDirection = up;
-            canMove = true;
-            shuffleList();
-    }
-
-    void moveDown()
-        {
-            nextPos = Vector3.back;
-            currentDirection = down;
-            canMove = true;
-            shuffleList();
-    }
-
-     void moveRight()
-        {
-            nextPos = Vector3.right;
-            currentDirection = right;
-            canMove = true;
-            shuffleList();
-    }
-
-    void moveLeft()
-        {
-            nextPos = Vector3.left;
-            currentDirection = left;
-            canMove = true;
-            shuffleList();
-    }
-
-
-void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
-    {
-        for (int i = 0; i < wasdKeys.Count; i++)
-        {
-            string temp = wasdKeys[i];
-            int randomIndex = Random.Range(i, wasdKeys.Count);
-            wasdKeys[i] = wasdKeys[randomIndex];
-            wasdKeys[randomIndex] = temp;
-        }
-    }
-
 
     bool Valid()
     {
