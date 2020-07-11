@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,17 +24,15 @@ public class PlayerMovementScript : MonoBehaviour
     private Vector3 startPosition;  // GameObject current position at start is the start position
 
 
-    /*class KeyDirection
+    /* class KeyDirection
      {
          public KeyDirection(string W, string A, string S, string D)
          {
-             List<string> wasdKeys = new List<string>(W = "W",A = "A",S = "S",D = "D");
+             List<string> keyDir = new List<string>(W = "W",A = "A",S = "S",D = "D");
          }
      } */
 
-    // public string[] wasdKeys = new string[] { "W", "A", "S", "D" };
-
-    public List<string> wasdKeys;
+    public string[] wasdKeys = new string[] { "W", "A", "S", "D" };
 
     void Start()
     {
@@ -57,27 +55,40 @@ public class PlayerMovementScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            // if(GetComponent<PlayerMovementScript>().wasdKeys.Contains)
-            moveUp();
+            
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            Debug.Log("Index is " + wasdKeys.ToString());
-            moveLeft();
+            nextPos = Vector3.forward;
+            currentDirection = up;
+            canMove = true;
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            moveDown();
+            nextPos = Vector3.back;
+            currentDirection = down;
+            canMove = true;
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            moveRight();
+            nextPos = Vector3.right;
+            currentDirection = right;
+            canMove = true;
+            shuffleList();
         }
 
-
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            nextPos = Vector3.left;
+            currentDirection = left;
+            canMove = true;
+            shuffleList();
+        }
 
         if (Vector3.Distance(destination, transform.position) <= 0.1f)
         {
@@ -95,45 +106,12 @@ public class PlayerMovementScript : MonoBehaviour
         }
     }
 
-     void moveUp()
-        {
-            nextPos = Vector3.forward;
-            currentDirection = up;
-            canMove = true;
-            shuffleList();
-    }
-
-    void moveDown()
-        {
-            nextPos = Vector3.back;
-            currentDirection = down;
-            canMove = true;
-            shuffleList();
-    }
-
-     void moveRight()
-        {
-            nextPos = Vector3.right;
-            currentDirection = right;
-            canMove = true;
-            shuffleList();
-    }
-
-    void moveLeft()
-        {
-            nextPos = Vector3.left;
-            currentDirection = left;
-            canMove = true;
-            shuffleList();
-    }
-
-
-void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
+    void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
     {
-        for (int i = 0; i < wasdKeys.Count; i++)
+        for (int i = 0; i < wasdKeys.Length; i++)
         {
             string temp = wasdKeys[i];
-            int randomIndex = Random.Range(i, wasdKeys.Count);
+            int randomIndex = Random.Range(i, wasdKeys.Length);
             wasdKeys[i] = wasdKeys[randomIndex];
             wasdKeys[randomIndex] = temp;
         }
@@ -149,9 +127,9 @@ void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows,
 
         if(Physics.Raycast(myRay,out hit,rayLength))
         {
-            if(hit.collider.tag == "Wall")      // If ray hits wall with tag "wall" then...
+            if(hit.collider.tag == "Wall")
             {
-                Instantiate(player, startPosition, Quaternion.identity);  // ...instantiate new player at startposition and destroy this player
+                Instantiate(player, startPosition, Quaternion.identity);  // Instantiate new player at startposition and destroy this player
                 Destroy(gameObject);
 
                 // canMove = false;

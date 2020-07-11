@@ -9,34 +9,17 @@ public class FollowPlayer : MonoBehaviour
     public Vector3 offset;
     public float smoothSpeed = 0.1f;
 
-
-    void Start()
+    private void FixedUpdate()      // Script for smooth camera motion
     {
-        
-    }
-
-
-    // Script for smooth camera motion - 
-    private void FixedUpdate()
-    {
-
         player = GameObject.FindWithTag("Player").transform;
         groundMiddle = GameObject.FindWithTag("GroundMiddle").transform;
 
+        Vector3 desiredPosition = (player.position + groundMiddle.position).normalized + offset;    // deklarerar ny variabel som är lika med den position vi vill till. I detta fall mellan spelaren och middleground + offset
 
-        // deklarerar ny variabel som är lika med den position vi vill till
-        Vector3 desiredPosition = (player.position + groundMiddle.position).normalized + offset;
-
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);     // interpolerar mellan två värden
         transform.position = smoothedPosition;
 
-         // Make camera look at player
      // transform.LookAt(player);
     }
 
-
-
-
-
-    // Thx Brackey, yur awesome
 }

@@ -105,7 +105,7 @@ MonoBehaviour:
     value: 0
   scale:
     overrideState: 1
-    value: 1
+    value: 0.8
 --- !u!114 &-1003137590068688197
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -126,7 +126,7 @@ MonoBehaviour:
     overrideState: 1
     value: 10
   threshold:
-    overrideState: 1
+    overrideState: 0
     value: 1
   softKnee:
     overrideState: 0
