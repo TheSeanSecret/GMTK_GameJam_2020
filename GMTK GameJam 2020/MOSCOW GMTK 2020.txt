@@ -1,19 +1,21 @@
-WASD kontrollerna slumpas efter varje tryck
-Första gången är WASD normalt
-Det finns ett mål som startar om banan
+WASD kontrollerna slumpas efter varje tryck X
+Första gången är WASD normalt X
+Det finns ett mål som startar om banan X
 
 
-Fiender som skjuter mot spelaren
-Hinder
+Fiender som skjuter mot spelaren X
+Hinder X
 
 
 MUST HAVE:
-Time limit mellan knapptryck
-Random WASD för movement
+Time limit mellan knapptryck -
+Random WASD för movement X
 
 SHOULD HAVE:
-Pausa spelet
+Pausa spelet -
 Startmeny
+EndCard
 Musik?
+SFX
 
-WASD blir piltangenter ibland under senare banor för att förvirra
+WASD blir piltangenter ibland under senare banor för att förvirra -

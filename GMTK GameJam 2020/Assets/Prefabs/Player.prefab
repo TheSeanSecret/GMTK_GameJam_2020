@@ -109,6 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   player: {fileID: 8209121054336030441}
+  playerDeath: {fileID: 8234607236142213165, guid: c4bdda054b6b2c64daca26b87f3fb66f,
+    type: 3}
   wasdKeys:
   - W
   - A

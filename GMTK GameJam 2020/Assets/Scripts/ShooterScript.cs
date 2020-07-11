@@ -8,19 +8,19 @@ public class ShooterScript : MonoBehaviour
     public GameObject bullet;
     public Transform muzzle;
 
-
     public float fireRate = 0.5F;
     private float nextFire = 0.0F;
+
     void Update()
     {
         player = GameObject.FindWithTag("Player");
 
         transform.LookAt(player.transform);
 
-        if (Time.time > nextFire)
-        {
-            nextFire = Time.time + fireRate;
-            Instantiate(bullet, muzzle.position, muzzle.rotation);      // Instansierar enemy bullet muzzle med mellanrum
-        }
+            if (Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
+                Instantiate(bullet, muzzle.position, muzzle.rotation);      // Instansierar enemy bullet muzzle med mellanrum
+            }
     }
 }

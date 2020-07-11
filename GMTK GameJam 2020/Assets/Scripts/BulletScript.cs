@@ -19,4 +19,13 @@ public class BulletScript : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Wall") // if bullet hits player then make new player, destroy bullet and destroy player
+        {
+            Destroy(gameObject);
+        }
+    }
 }

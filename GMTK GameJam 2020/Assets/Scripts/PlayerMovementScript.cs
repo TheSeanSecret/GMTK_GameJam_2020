@@ -21,6 +21,7 @@ public class PlayerMovementScript : MonoBehaviour
     bool canMove;
 
     public GameObject player;
+    public GameObject playerDeath;
 
     private Vector3 startPosition;  // GameObject current position at start is the start position
 
@@ -209,6 +210,7 @@ void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows,
             if(hit.collider.tag == "Wall")      // If ray hits wall with tag "wall" then...
             {
                 Instantiate(player, startPosition, Quaternion.identity);  // ...instantiate new player at startposition and destroy this player
+                Instantiate(playerDeath, transform.position, transform.rotation);
                 Destroy(gameObject);
 
                 // canMove = false;
@@ -235,6 +237,8 @@ void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows,
         {
             Instantiate(player, startPosition, Quaternion.identity);  // ...instantiate new player at startposition and destroy this player
             Destroy(other.gameObject);
+            Instantiate(playerDeath, transform.position, transform.rotation);
+
             Destroy(gameObject);
         }
     }
