@@ -52,7 +52,7 @@ public class PlayerMovementScript : MonoBehaviour
         Move();
     }
 
-    void Move()
+    void Move() 
     {
         transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
 
@@ -146,28 +146,28 @@ public class PlayerMovementScript : MonoBehaviour
             nextPos = Vector3.forward;
             currentDirection = up;
             canMove = true; 
-    }
+        }
 
     void moveDown()
         {
             nextPos = Vector3.back;
             currentDirection = down;
             canMove = true;
-    }
+        }
 
      void moveRight()
         {
             nextPos = Vector3.right;
             currentDirection = right;
             canMove = true;
-    }
+        }
 
     void moveLeft()
         {
             nextPos = Vector3.left;
             currentDirection = left;
             canMove = true;
-    }
+        }
 
 
 void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
@@ -224,7 +224,18 @@ void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows,
 
                 return false;
             }
+
         }
         return true;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bullet") // if bullet hits player then make new player, destroy bullet and destroy player
+        {
+            Instantiate(player, startPosition, Quaternion.identity);  // ...instantiate new player at startposition and destroy this player
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
