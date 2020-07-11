@@ -19,7 +19,10 @@ public class PlayerMovementScript : MonoBehaviour
 
     bool canMove;
 
-    Vector3 startPosition;  // GameObject current position at start is the start position
+    public GameObject player;
+
+    private Vector3 startPosition;  // GameObject current position at start is the start position
+
 
     /* class KeyDirection
      {
@@ -31,7 +34,6 @@ public class PlayerMovementScript : MonoBehaviour
 
     public string[] wasdKeys = new string[] { "W", "A", "S", "D" };
 
-
     void Start()
     {
         currentDirection = up;
@@ -39,6 +41,8 @@ public class PlayerMovementScript : MonoBehaviour
         destination = transform.position;
 
         startPosition = transform.position;
+        startPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
     }
 
     void Update()
@@ -50,14 +54,12 @@ public class PlayerMovementScript : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
 
-
-
-
         if (Input.GetKeyDown(KeyCode.W))
         {
             nextPos = Vector3.forward;
             currentDirection = up;
             canMove = true;
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -65,6 +67,7 @@ public class PlayerMovementScript : MonoBehaviour
             nextPos = Vector3.back;
             currentDirection = down;
             canMove = true;
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.D))
@@ -72,6 +75,7 @@ public class PlayerMovementScript : MonoBehaviour
             nextPos = Vector3.right;
             currentDirection = right;
             canMove = true;
+            shuffleList();
         }
 
         if (Input.GetKeyDown(KeyCode.A))
@@ -79,6 +83,7 @@ public class PlayerMovementScript : MonoBehaviour
             nextPos = Vector3.left;
             currentDirection = left;
             canMove = true;
+            shuffleList();
         }
 
         if (Vector3.Distance(destination, transform.position) <= 0.1f)
@@ -95,9 +100,19 @@ public class PlayerMovementScript : MonoBehaviour
                 }
             }
         }
-
-
     }
+
+    void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
+    {
+        for (int i = 0; i < wasdKeys.Length; i++)
+        {
+            string temp = wasdKeys[i];
+            int randomIndex = Random.Range(i, wasdKeys.Length);
+            wasdKeys[i] = wasdKeys[randomIndex];
+            wasdKeys[randomIndex] = temp;
+        }
+    }
+
 
     bool Valid()
     {
@@ -110,13 +125,20 @@ public class PlayerMovementScript : MonoBehaviour
         {
             if(hit.collider.tag == "Wall")
             {
+                Instantiate(player, startPosition, Quaternion.identity);  // Instantiate new player at startposition and destroy this player
+                Destroy(gameObject);
+
+                // canMove = false;
                 // transform.position = startPosition;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // Restart Level
+                // SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // Restart Level
                 // return false;
             }
 
             if (hit.collider.tag == "Boundary") // cannot move if hit level boundary
             {
+                // Instantiate(player, startPosition, Quaternion.identity);
+                // Destroy(gameObject);
+
                 return false;
             }
         }

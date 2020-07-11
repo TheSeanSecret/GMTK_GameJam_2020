@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
   m_Name: Grain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -71,7 +71,7 @@ MonoBehaviour:
     value: 1
   lumContrib:
     overrideState: 1
-    value: 1
+    value: 0.5
 --- !u!114 &-1337002706894040168
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -148,11 +148,11 @@ MonoBehaviour:
     value: 0
   dirtTexture:
     overrideState: 0
-    value: {fileID: 0}
+    value: {fileID: 2800000, guid: dae1c46e6d6d0c84dbe678f736f5cb24, type: 3}
     defaultState: 1
   dirtIntensity:
     overrideState: 0
-    value: 0
+    value: 5
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,11 +212,11 @@ MonoBehaviour:
     value: 1
   spectralLut:
     overrideState: 0
-    value: {fileID: 0}
+    value: {fileID: 2800000, guid: dae1c46e6d6d0c84dbe678f736f5cb24, type: 3}
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.3
+    value: 0.153
   fastMode:
     overrideState: 0
     value: 0

@@ -1,0 +1,5 @@
+A list of 1234 is shuffled after every WASD keypress
+
+Each WASD corresponds to 1234 order in wasdKeys list
+
+1234 each corresponds to up, left, down, right
