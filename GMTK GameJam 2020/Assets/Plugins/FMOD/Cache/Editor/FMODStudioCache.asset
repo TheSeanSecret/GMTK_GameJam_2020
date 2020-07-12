@@ -54,6 +54,41 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7339996625070748344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301258987559316
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-5643262709677352373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
+  Exists: 0
 --- !u!114 &-5611849176458318413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +104,7 @@ MonoBehaviour:
   Path: event:/SFX/LevelStart
   guid: d4adfaf9be548b4b846b0c2387383fdb
   Banks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -131,6 +166,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-1763558461906234017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
+  Exists: 1
 --- !u!114 &-1583448642632990246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7403679541500528776}
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   EditorEvents:
   - {fileID: 351645286002252580}
   - {fileID: 1051690721469554567}
@@ -190,12 +242,14 @@ MonoBehaviour:
   - {fileID: -5611849176458318413}
   - {fileID: 1376215825175753579}
   - {fileID: 3012425976985044579}
+  - {fileID: 1758569148900233754}
+  - {fileID: 607350569801558651}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   StringsBanks:
   - {fileID: 7403679541500528776}
-  stringsBankWriteTime: 637301233244644167
+  stringsBankWriteTime: 637301265944900595
   cacheVersion: 3
 --- !u!114 &71322874064066731
 MonoBehaviour:
@@ -230,7 +284,7 @@ MonoBehaviour:
   Path: event:/SFX/Death
   guid: 1892a29a5f52164bbe18a57a56d6d881
   Banks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -238,6 +292,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3947
+--- !u!114 &607350569801558651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MenuMusic
+  guid: 866e39d0f210fa49bc930115f05f59f5
+  Banks:
+  - {fileID: 8715703288661892662}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 14769
 --- !u!114 &896739769525930573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +348,7 @@ MonoBehaviour:
   Path: event:/SFX/Shoot
   guid: e68bdcf5ab12ed4c88fc3365e5ddd804
   Banks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -294,7 +371,7 @@ MonoBehaviour:
   Path: event:/SFX/Shoot 2
   guid: 5f8bdfeb4ba7ef4d8f88d4f471fa0240
   Banks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -302,6 +379,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 466
+--- !u!114 &1758569148900233754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/LevelMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/LevelMusic
+  guid: 46a558e7e1be9345b4db48d8028255d1
+  Banks:
+  - {fileID: 8715703288661892662}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1763558461906234017}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 228947
 --- !u!114 &1841619028691408377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +421,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2358761297346218377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301254516042456
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2361660133410842877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301253487506532
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &3012425976985044579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +472,7 @@ MonoBehaviour:
   Path: event:/SFX/Menu
   guid: 5b420fb5de67fc46983a145e401af050
   Banks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -358,7 +495,7 @@ MonoBehaviour:
   Path: event:/SFX/PlayerMove
   guid: 2e84a96f5f9da649be1ee24c000b873a
   Banks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -417,7 +554,7 @@ MonoBehaviour:
   Path: event:/SFX/LevelClear
   guid: 730c02cf5c893945a44eec1871a41836
   Banks:
-  - {fileID: 6079667297180041469}
+  - {fileID: 8715703288661892662}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -442,7 +579,7 @@ MonoBehaviour:
   lastModified: 637301233244604491
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &6640722756923452692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,11 +630,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637301233244644167
+  lastModified: 637301265944900595
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1004
+    Value: 1232
   Exists: 1
 --- !u!114 &8221841551764339473
 MonoBehaviour:
@@ -535,6 +672,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8715703288661892662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301265944855955
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &9070599870251797734
 MonoBehaviour:
   m_ObjectHideFlags: 0

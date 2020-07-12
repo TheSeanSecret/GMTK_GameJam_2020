@@ -50,6 +50,12 @@ public class PlayerMovementScript : MonoBehaviour
     {
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(playerMoveSound, GetComponent<Transform>(), GetComponent<Rigidbody>());     // Necessary for 3D sound
         Move();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("Application Quit");
+        }
     }
 
     void Move() 
