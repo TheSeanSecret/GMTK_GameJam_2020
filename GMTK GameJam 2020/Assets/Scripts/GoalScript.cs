@@ -11,7 +11,7 @@ public class GoalScript : MonoBehaviour
         if (other.gameObject.tag == ("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Load next scene in queue
-            Debug.Log("Load Next level");
+            Debug.Log("Next level " + (SceneManager.GetActiveScene().buildIndex + 1));
         }
     }
 }

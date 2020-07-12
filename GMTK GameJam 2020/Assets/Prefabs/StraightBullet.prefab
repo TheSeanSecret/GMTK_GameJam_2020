@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3099167784109482258}
   - component: {fileID: 3742119900608878517}
   - component: {fileID: 3725265328657535568}
+  - component: {fileID: -7547298941658307906}
   m_Layer: 0
   m_Name: StraightBullet
   m_TagString: Bullet
@@ -113,6 +114,8 @@ MonoBehaviour:
   speed: 1
   rb: {fileID: 3099167784109482258}
   destroyTime: 10
+  explosion: {fileID: 8275125185665528637, guid: d8ce4f4d97b0d694f817d8615dbbb352,
+    type: 3}
 --- !u!114 &3099167784109482248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,3 +229,26 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &-7547298941658307906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3099167784109482249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/ShootDestroy
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 20

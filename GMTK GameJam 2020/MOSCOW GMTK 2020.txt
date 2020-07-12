@@ -2,10 +2,8 @@ WASD kontrollerna slumpas efter varje tryck X
 Första gången är WASD normalt X
 Det finns ett mål som startar om banan X
 
-
 Fiender som skjuter mot spelaren X
 Hinder X
-
 
 MUST HAVE:
 Time limit mellan knapptryck -
@@ -13,9 +11,21 @@ Random WASD för movement X
 
 SHOULD HAVE:
 Pausa spelet -
-Startmeny
-EndCard
-Musik?
-SFX
+StartmenyX
+EndCard X
+Musik X
+SFX X
+Transition between levels X
+
+Screenshake? -
+Current Level Text OR Leveltext before LevelStart
+
+Ljud och effekt när bullets förstörs X
+Längre musik X
+Screenshots of gameplay
+
+Fixa level med 3 shooters X
 
 WASD blir piltangenter ibland under senare banor för att förvirra -
+
+Deathcount för varje bana?

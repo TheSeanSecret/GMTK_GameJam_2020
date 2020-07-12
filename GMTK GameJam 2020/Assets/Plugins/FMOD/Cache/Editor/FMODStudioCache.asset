@@ -54,6 +54,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7470344936112110220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301703420623024
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7339996625070748344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +87,24 @@ MonoBehaviour:
   Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637301258987559316
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6539479265270343853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301687399969381
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -104,7 +140,7 @@ MonoBehaviour:
   Path: event:/SFX/LevelStart
   guid: d4adfaf9be548b4b846b0c2387383fdb
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -112,6 +148,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7168
+--- !u!114 &-4689791973018424369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
+  Exists: 0
 --- !u!114 &-4205802479036421784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +180,42 @@ MonoBehaviour:
   Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637301039307992782
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3931043715360101107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301664349132705
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3662302161034238824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301661453086751
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -147,6 +236,40 @@ MonoBehaviour:
   lastModified: 637301034351811935
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-2019293079360373955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
+  Exists: 1
+--- !u!114 &-1965451787282362761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
   Exists: 0
 --- !u!114 &-1870744363876980688
 MonoBehaviour:
@@ -182,7 +305,7 @@ MonoBehaviour:
   Min: 0
   Max: 26
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1583448642632990246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7403679541500528776}
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   EditorEvents:
   - {fileID: 351645286002252580}
   - {fileID: 1051690721469554567}
@@ -244,12 +367,13 @@ MonoBehaviour:
   - {fileID: 3012425976985044579}
   - {fileID: 1758569148900233754}
   - {fileID: 607350569801558651}
+  - {fileID: 2665884431084115539}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   StringsBanks:
   - {fileID: 7403679541500528776}
-  stringsBankWriteTime: 637301265944900595
+  stringsBankWriteTime: 637301703420667663
   cacheVersion: 3
 --- !u!114 &71322874064066731
 MonoBehaviour:
@@ -284,7 +408,7 @@ MonoBehaviour:
   Path: event:/SFX/Death
   guid: 1892a29a5f52164bbe18a57a56d6d881
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -307,7 +431,7 @@ MonoBehaviour:
   Path: event:/Music/MenuMusic
   guid: 866e39d0f210fa49bc930115f05f59f5
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -348,7 +472,7 @@ MonoBehaviour:
   Path: event:/SFX/Shoot
   guid: e68bdcf5ab12ed4c88fc3365e5ddd804
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -356,6 +480,40 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 466
+--- !u!114 &1114218122667491502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
+  Exists: 0
+--- !u!114 &1298836244179806038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
+  Exists: 0
 --- !u!114 &1376215825175753579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +529,7 @@ MonoBehaviour:
   Path: event:/SFX/Shoot 2
   guid: 5f8bdfeb4ba7ef4d8f88d4f471fa0240
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -394,15 +552,15 @@ MonoBehaviour:
   Path: event:/Music/LevelMusic
   guid: 46a558e7e1be9345b4db48d8028255d1
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1763558461906234017}
+  - {fileID: -2019293079360373955}
   MinDistance: 0
   MaxDistance: 0
-  Length: 228947
+  Length: 406879
 --- !u!114 &1841619028691408377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,6 +576,42 @@ MonoBehaviour:
   Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637301034692481797
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1911389862795756689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301664536663814
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2176260632483881451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301646114305924
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -457,6 +651,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2665884431084115539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ShootDestroy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ShootDestroy
+  guid: 70c322009f1a6e4bbec202564ef27a00
+  Banks:
+  - {fileID: -7470344936112110220}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 927
 --- !u!114 &3012425976985044579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,7 +689,7 @@ MonoBehaviour:
   Path: event:/SFX/Menu
   guid: 5b420fb5de67fc46983a145e401af050
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -480,6 +697,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &3179539315016116375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelMusic/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 26
+  Default: 0
+  Exists: 0
 --- !u!114 &3219522806323131428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +729,7 @@ MonoBehaviour:
   Path: event:/SFX/PlayerMove
   guid: 2e84a96f5f9da649be1ee24c000b873a
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -554,7 +788,7 @@ MonoBehaviour:
   Path: event:/SFX/LevelClear
   guid: 730c02cf5c893945a44eec1871a41836
   Banks:
-  - {fileID: 8715703288661892662}
+  - {fileID: -7470344936112110220}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -630,11 +864,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../Fmod/GMTK_GameJam_2020_Fmod/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637301265944900595
+  lastModified: 637301703420667663
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1232
+    Value: 1270
   Exists: 1
 --- !u!114 &8221841551764339473
 MonoBehaviour:
@@ -689,7 +923,7 @@ MonoBehaviour:
   lastModified: 637301265944855955
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &9070599870251797734
 MonoBehaviour:
   m_ObjectHideFlags: 0
