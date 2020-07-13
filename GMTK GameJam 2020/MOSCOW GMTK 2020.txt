@@ -16,16 +16,21 @@ EndCard X
 Musik X
 SFX X
 Transition between levels X
-
 Screenshake? -
-Current Level Text OR Leveltext before LevelStart
-
+Current Level Text OR Leveltext before LevelStart X
 Ljud och effekt när bullets förstörs X
 Längre musik X
-Screenshots of gameplay
+Screenshots of gameplay X
 
 Fixa level med 3 shooters X
 
 WASD blir piltangenter ibland under senare banor för att förvirra -
 
 Deathcount för varje bana?
+Level Select Screen
+Minst 100 Levels
+
+_____
+
+Dunno if I'm allowed to post twice but I changed the picture since the first one looked a bit boring :3
+​https://seansecret.itch.io/wrongasd​
