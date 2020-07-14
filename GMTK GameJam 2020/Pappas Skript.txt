@@ -1,0 +1,121 @@
+void Move() 
+    {
+        transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+
+        checkWhereToGo(KeyCode.W, "W");
+        checkWhereToGo(KeyCode.A, "A");
+        checkWhereToGo(KeyCode.S, "S");
+        checkWhereToGo(KeyCode.D, "D");
+        
+        /*
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (wasdKeys.IndexOf("W").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("W").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("W").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("W").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (wasdKeys.IndexOf("A").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("A").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("A").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("A").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (wasdKeys.IndexOf("S").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("S").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("S").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("S").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();
+        }
+        
+        /* if (Input.GetKeyDown(KeyCode.D))
+        {
+            checkWhereToGo(KeyCode.D,"D");
+
+
+          /*  if (wasdKeys.IndexOf("D").Equals(0))
+            {
+                moveUp();
+            }
+            if (wasdKeys.IndexOf("D").Equals(1))
+            {
+                moveLeft();
+            }
+            if (wasdKeys.IndexOf("D").Equals(2))
+            {
+                moveDown();
+            }
+            if (wasdKeys.IndexOf("D").Equals(3))
+            {
+                moveRight();
+            }
+            shuffleList();*/
+    }
+
+
+    void checkWhereToGo(KeyCode pelle, string wasdKeyDown)
+        {
+            if (Input.GetKeyDown(pelle))
+            {
+                if (wasdKeys.IndexOf(wasdKeyDown).Equals(0))
+                {
+                    moveUp();
+                }
+                if (wasdKeys.IndexOf(wasdKeyDown).Equals(1))
+                {
+                    moveLeft();
+                }
+                if (wasdKeys.IndexOf(wasdKeyDown).Equals(2))
+                {
+                    moveDown();
+                }
+                if (wasdKeys.IndexOf(wasdKeyDown).Equals(3))
+                {
+                    moveRight();
+                }
+                shuffleList();
+            }
+        }
