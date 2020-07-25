@@ -1,0 +1,8 @@
+BUG:
+- Player can enter enemies
+- Player can enter outside of level
+
+SHOULD HAVE:
+- Updated Music
+- Level Select Screen
+- More Levels
