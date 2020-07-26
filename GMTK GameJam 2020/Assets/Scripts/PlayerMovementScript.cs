@@ -256,5 +256,12 @@ public class PlayerMovementScript : MonoBehaviour
 
             Destroy(gameObject);
         }
+
+        if (other.gameObject.tag == "Wall")      // If player hits wall with tag "wall" then... This is so player dies if he falls down level and touches the BG object
+        {
+            Instantiate(player, startPosition, Quaternion.identity);  // ...instantiate new player at startposition and destroy this player
+            Instantiate(playerDeath, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 }
