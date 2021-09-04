@@ -58,94 +58,25 @@ public class PlayerMovementScript : MonoBehaviour
         }
     }
 
-    void Move() 
+    void MoveDirection(int index)
     {
-        transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
-
-        if (Input.GetKeyDown(KeyCode.W))
+        if (index.Equals(0))
         {
-            if (wasdKeys.IndexOf("W").Equals(0))
-            {
-                moveUp();
-            }
-            if (wasdKeys.IndexOf("W").Equals(1))
-            {
-                moveLeft();
-            }
-            if (wasdKeys.IndexOf("W").Equals(2))
-            {
-                moveDown();
-            }
-            if (wasdKeys.IndexOf("W").Equals(3))
-            {
-                moveRight();
-            }
-            shuffleList();
+            moveUp();
         }
-
-        if (Input.GetKeyDown(KeyCode.A))
+        if (index.Equals(1))
         {
-            if (wasdKeys.IndexOf("A").Equals(0))
-            {
-                moveUp();
-            }
-            if (wasdKeys.IndexOf("A").Equals(1))
-            {
-                moveLeft();
-            }
-            if (wasdKeys.IndexOf("A").Equals(2))
-            {
-                moveDown();
-            }
-            if (wasdKeys.IndexOf("A").Equals(3))
-            {
-                moveRight();
-            }
-            shuffleList();
+            moveLeft();
         }
-
-        if (Input.GetKeyDown(KeyCode.S))
+        if (index.Equals(2))
         {
-            if (wasdKeys.IndexOf("S").Equals(0))
-            {
-                moveUp();
-            }
-            if (wasdKeys.IndexOf("S").Equals(1))
-            {
-                moveLeft();
-            }
-            if (wasdKeys.IndexOf("S").Equals(2))
-            {
-                moveDown();
-            }
-            if (wasdKeys.IndexOf("S").Equals(3))
-            {
-                moveRight();
-            }
-            shuffleList();
+            moveDown();
         }
-
-        if (Input.GetKeyDown(KeyCode.D))
+        if (index.Equals(3))
         {
-            if (wasdKeys.IndexOf("D").Equals(0))
-            {
-                moveUp();
-            }
-            if (wasdKeys.IndexOf("D").Equals(1))
-            {
-                moveLeft();
-            }
-            if (wasdKeys.IndexOf("D").Equals(2))
-            {
-                moveDown();
-            }
-            if (wasdKeys.IndexOf("D").Equals(3))
-            {
-                moveRight();
-            }
-            shuffleList();
+            moveRight();
         }
-
+        shuffleList();
 
         void moveUp()
         {
@@ -185,15 +116,15 @@ public class PlayerMovementScript : MonoBehaviour
 
 
         void shuffleList()  // Shuffles list of wasdKeys... How does it work? Who knows, it might as well be magic
-    {
-        for (int i = 0; i < wasdKeys.Count; i++)
         {
-            string temp = wasdKeys[i];
-            int randomIndex = Random.Range(i, wasdKeys.Count);
-            wasdKeys[i] = wasdKeys[randomIndex];
-            wasdKeys[randomIndex] = temp;
+            for (int i = 0; i < wasdKeys.Count; i++)
+            {
+                string temp = wasdKeys[i];
+                int randomIndex = Random.Range(i, wasdKeys.Count);
+                wasdKeys[i] = wasdKeys[randomIndex];
+                wasdKeys[randomIndex] = temp;
+            }
         }
-    }
 
         if (Vector3.Distance(destination, transform.position) <= 0.1f)
         {
@@ -208,6 +139,31 @@ public class PlayerMovementScript : MonoBehaviour
                     canMove = false;
                 }
             }
+        }
+    }
+
+    void Move() 
+    {
+        transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+        
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            MoveDirection(wasdKeys.IndexOf("W"));
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            MoveDirection(wasdKeys.IndexOf("A"));
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            MoveDirection(wasdKeys.IndexOf("S"));
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            MoveDirection(wasdKeys.IndexOf("D"));
         }
     }
 
